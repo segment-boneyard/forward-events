@@ -1,0 +1,13 @@
+{
+  "name": "forward-events",
+  "version": "0.0.1",
+  "repository": "segmentio/forward-events",
+  "description": "forward events from one emitter to another",
+  "keywords": ["events", "forward"],
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*"
+  },
+  "license": "MIT"
+}
