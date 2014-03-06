@@ -9,12 +9,6 @@
 $ npm install forward-events
 ```
 
-## Example
-
-```js
-
-```
-
 # License
 
   MIT
