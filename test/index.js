@@ -32,4 +32,17 @@ describe('forward(src, dst)', function(){
     a.on('foo', done);
     a.emit('foo');
   })
+
+  it('should forward errors', function(done){
+    var a = new Emitter;
+    var b = new Emitter;
+    forward(a, b);
+
+    b.on('error', function(err){
+      err.message.should.equal('boom');
+      done();
+    });
+
+    a.emit('error', new Error('boom'));
+  })
 })

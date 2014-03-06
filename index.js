@@ -10,8 +10,8 @@ module.exports = function(src, dst){
   assert(src.emit, 'dst must be an emitter');
 
   var emit = src.emit;
-  src.emit = function(){
-    emit.apply(src, arguments);
+  src.emit = function(type){
+    if ('error' != type) emit.apply(src, arguments);
     return dst.emit.apply(dst, arguments);
   };
 };
